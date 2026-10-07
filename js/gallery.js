@@ -89,9 +89,8 @@ gallery.insertAdjacentHTML('afterbegin', markup);
 gallery.addEventListener('click', e => {
     e.preventDefault();
     if (e.target.classList.contains('gallery-image')) {
-        e.target.src = e.target.dataset.source;
         const instance = basicLightbox.create(`
-        <img src="${e.target.src}" width="800" height="600">
+        <img src="${e.target.dataset.source}" width="800" height="600">
         `)
 
     instance.show()
